@@ -1,7 +1,7 @@
-package me.ahch.justdicetask.pokemon.domain.usecase
+package me.ahch.justdicetask.features.pokemon.domain.usecase
 
 import me.ahch.justdicetask.pokemon.domain.model.PokemonsCount
-import me.ahch.justdicetask.pokemon.domain.repository.PokemonsRepository
+import me.ahch.justdicetask.features.pokemon.domain.repository.PokemonsRepository
 import javax.inject.Inject
 
 class GetPokemonsCountUseCase @Inject constructor(

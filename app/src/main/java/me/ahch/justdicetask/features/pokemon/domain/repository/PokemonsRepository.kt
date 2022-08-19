@@ -1,6 +1,6 @@
-package me.ahch.justdicetask.pokemon.domain.repository
+package me.ahch.justdicetask.features.pokemon.domain.repository
 
-import me.ahch.justdicetask.pokemon.domain.model.Pokemon
+import me.ahch.justdicetask.features.pokemon.domain.model.Pokemon
 import me.ahch.justdicetask.pokemon.domain.model.PokemonsCount
 
 interface PokemonsRepository {

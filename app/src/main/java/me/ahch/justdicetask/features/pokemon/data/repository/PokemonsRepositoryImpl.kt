@@ -1,13 +1,14 @@
-package me.ahch.justdicetask.pokemon.data.repository
+package me.ahch.justdicetask.features.pokemon.data.repository
 
-import me.ahch.justdicetask.pokemon.data.mapper.toPokemon
-import me.ahch.justdicetask.pokemon.data.mapper.toPokemonCount
-import me.ahch.justdicetask.pokemon.data.remote.PokemonApi
-import me.ahch.justdicetask.pokemon.domain.model.Pokemon
+import me.ahch.justdicetask.features.pokemon.data.mapper.toPokemon
+import me.ahch.justdicetask.features.pokemon.data.mapper.toPokemonCount
+import me.ahch.justdicetask.features.pokemon.data.remote.PokemonApi
+import me.ahch.justdicetask.features.pokemon.domain.model.Pokemon
 import me.ahch.justdicetask.pokemon.domain.model.PokemonsCount
-import me.ahch.justdicetask.pokemon.domain.repository.PokemonsRepository
+import me.ahch.justdicetask.features.pokemon.domain.repository.PokemonsRepository
+import javax.inject.Inject
 
-class PokemonsRepositoryImpl(private val api: PokemonApi) : PokemonsRepository {
+class PokemonsRepositoryImpl @Inject constructor(private val api: PokemonApi) : PokemonsRepository {
 
     override suspend fun getPokemonsCount(): Result<PokemonsCount> {
         val result = api.getPokemonsCount()
